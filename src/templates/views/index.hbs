@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/images/weather.png">
+        <link rel="stylesheet"  href="/css/styles.css"> <! __ here we have written /css/style.css as in the app.js file we are already in the public folder__>
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}  <! __ this is header partial from header.hbs __>
+            <p>Use this site get your Weather!</p>
+            <form>
+                <input placeholder="Location">
+                <button>Search</button>
+            </form>
+        </div>
+
+        <p id="msg-1"></p>
+        {{>footer}}  <! __ this is footer partial from footer.hbs __>
+
+    </body>
+</html>
+
+
+
+
+     <script src='/js/1.js'></script>
