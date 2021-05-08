@@ -9,7 +9,7 @@ const forecast = (lat,lon,callback) =>{
             }else if(response.body.cod === "400"){
                 callback("No such location",undefined)
             }else{
-                callback(undefined,response.body.weather[0].main + " outside"+" and It's currently "+ response.body.main.temp +" degrees out in "+ response.body.name)
+                callback(undefined,response.body.weather[0].main + " outside"+" and It's currently "+ response.body.main.temp +" degrees out in "+ response.body.name + ' ' + response.body.sys.country + ' but it feels like ' + response.body.main.feels_like +' degrees '+'and it will be '+ response.body.main.humidity+'% Humid today.')
             }
     })
 
