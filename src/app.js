@@ -10,7 +10,7 @@ const publicDirectoryPath = path.join(__dirname,'../public') // path to our stat
 //NOTE : We are using this public folder beacuse it contains static css file
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
  app.use(express.static(publicDirectoryPath))    // serve our static file using express.static() which will serve our path to index.html and will render index.html on first page 
 
@@ -98,5 +98,5 @@ app.get('*',(req,res)=>{  // '*' this wildcard character means that it's for all
 
 
 app.listen(port,()=>{
-    console.log('Server is running!!')
+    console.log('Server is running on port ' + port)
 })
